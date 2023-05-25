@@ -11,7 +11,8 @@ import SwiftUI
 struct AdvancedProgSwiftApp: App {
     var body: some Scene {
         WindowGroup {
-            MenuItemsView()
+            let viewModel = MenuViewViewModel() // Create an instance of MenuViewViewModel
+            MenuItemsView(menuItems: viewModel) .environmentObject(viewModel) // Pass the viewModel to MenuItemsView
         }
     }
 }
