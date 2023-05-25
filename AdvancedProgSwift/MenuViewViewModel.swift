@@ -60,17 +60,14 @@ class MenuViewViewModel: ObservableObject {
     
     func updateMenuItems() {
             switch sortBy {
-            // Sorting by number
             case .mostPopular:
                 foodMenuItems.sort() { $0.ordersCount > $1.ordersCount }
                 drinkMenuItems.sort() { $0.ordersCount > $1.ordersCount }
                 dessertMenuItems.sort() { $0.ordersCount > $1.ordersCount }
-            // Sorting by cost
             case .price:
                 foodMenuItems.sort() { $0.price < $1.price }
                 drinkMenuItems.sort() { $0.price < $1.price }
                 dessertMenuItems.sort() { $0.price < $1.price }
-            // Sort by titles alphabetically and digits
             case .alphabetical:
                 foodMenuItems.sort() { sortByTitle(lhs: $0, rhs: $1) }
                 drinkMenuItems.sort() { sortByTitle(lhs: $0, rhs: $1) }
