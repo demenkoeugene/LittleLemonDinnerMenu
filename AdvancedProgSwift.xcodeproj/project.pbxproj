@@ -13,7 +13,7 @@
 		F64F9A5F2A16600400EFB592 /* AdvancedProgSwiftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F9A5E2A16600400EFB592 /* AdvancedProgSwiftApp.swift */; };
 		F64F9A632A16600600EFB592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64F9A622A16600600EFB592 /* Assets.xcassets */; };
 		F64F9A662A16600600EFB592 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F64F9A652A16600600EFB592 /* Preview Assets.xcassets */; };
-		F64F9A702A16600600EFB592 /* AdvancedProgSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F9A6F2A16600600EFB592 /* AdvancedProgSwiftTests.swift */; };
+		F64F9A702A16600600EFB592 /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F9A6F2A16600600EFB592 /* MenuItemTests.swift */; };
 		F64F9A7A2A16600600EFB592 /* AdvancedProgSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F9A792A16600600EFB592 /* AdvancedProgSwiftUITests.swift */; };
 		F64F9A7C2A16600600EFB592 /* AdvancedProgSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F9A7B2A16600600EFB592 /* AdvancedProgSwiftUITestsLaunchTests.swift */; };
 		F64F9A892A16603700EFB592 /* MenuItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64F9A882A16603700EFB592 /* MenuItemsView.swift */; };
@@ -49,7 +49,7 @@
 		F64F9A622A16600600EFB592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F64F9A652A16600600EFB592 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F64F9A6B2A16600600EFB592 /* AdvancedProgSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedProgSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F64F9A6F2A16600600EFB592 /* AdvancedProgSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedProgSwiftTests.swift; sourceTree = "<group>"; };
+		F64F9A6F2A16600600EFB592 /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
 		F64F9A752A16600600EFB592 /* AdvancedProgSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvancedProgSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64F9A792A16600600EFB592 /* AdvancedProgSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedProgSwiftUITests.swift; sourceTree = "<group>"; };
 		F64F9A7B2A16600600EFB592 /* AdvancedProgSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedProgSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 			children = (
 				F64F9A5E2A16600400EFB592 /* AdvancedProgSwiftApp.swift */,
 				F6900EB82A1F8D9B0040B5D8 /* View */,
-				F645E7B32A1664B400100A0E /* MenuViewViewModel.swift */,
+				F6900EBE2A1FA6090040B5D8 /* ViewModel */,
 				F6900EB72A1F8D4F0040B5D8 /* Model */,
 				F64F9A622A16600600EFB592 /* Assets.xcassets */,
 				F64F9A642A16600600EFB592 /* Preview Content */,
@@ -129,7 +129,7 @@
 		F64F9A6E2A16600600EFB592 /* AdvancedProgSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				F64F9A6F2A16600600EFB592 /* AdvancedProgSwiftTests.swift */,
+				F64F9A6F2A16600600EFB592 /* MenuItemTests.swift */,
 			);
 			path = AdvancedProgSwiftTests;
 			sourceTree = "<group>";
@@ -162,6 +162,14 @@
 				F6900EB32A1D3FEF0040B5D8 /* MenuItemsOptionView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F6900EBE2A1FA6090040B5D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F645E7B32A1664B400100A0E /* MenuViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F64F9A702A16600600EFB592 /* AdvancedProgSwiftTests.swift in Sources */,
+				F64F9A702A16600600EFB592 /* MenuItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
