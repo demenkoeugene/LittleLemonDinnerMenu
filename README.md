@@ -12,5 +12,5 @@ I used enumeration, filtering and sorting with functional programming, and creat
 
 <img src="gifForReadme.gif">
 
-<img width="472" alt="image" src="https://github.com/demenkoeugene/LittleLemonDinnerMenu/assets/110675494/09d5107f-ad38-4fd5-bcc8-9c8b2e18d1ae">
+<img width="700" alt="image" src="https://github.com/demenkoeugene/LittleLemonDinnerMenu/assets/110675494/09d5107f-ad38-4fd5-bcc8-9c8b2e18d1ae">
 
