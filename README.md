@@ -10,4 +10,4 @@ Added the navigation bar button to the MenuItemsView. When you click on the butt
 
 I used enumeration, filtering and sorting with functional programming, and created simple unit tests
 
-[[gifForReadme.gif]]
+<img src="gifForReadme.gif">
