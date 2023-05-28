@@ -12,13 +12,13 @@ class MenuItemTests: XCTestCase {
     
     func testMenuItemTitle() {
         let title = "Burger"
-        let menuItem = MenuItem(price: 0.0, title: title, menuCategory: .food, ordersCount: 0, ingredient: [])
+        let menuItem = MenuItem(price: 0.0, title: title, menuCategory: .food, ordersCount: 0, ingredient: [], image: "Brocolli")
         XCTAssertEqual(menuItem.title, title)
     }
 
     func testMenuItemIngredients() {
         let ingredients: [Ingredient] = [.pasta, .spinach, .tomatoSauce]
-        let menuItem = MenuItem(price: 0.0, title: "Burger", menuCategory: .food, ordersCount: 0, ingredient: ingredients)
+        let menuItem = MenuItem(price: 0.0, title: "Burger", menuCategory: .food, ordersCount: 0, ingredient: ingredients, image: "Brocolli")
         XCTAssertEqual(menuItem.ingredient, ingredients)
     }
 

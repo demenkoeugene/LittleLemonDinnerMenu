@@ -74,7 +74,14 @@ struct ViewMenu: View{
                 ForEach(menuItemsOut){ menuItem in
                     NavigationLink(destination: MenuItemDetailsView(menuItem: menuItem)) {
                         VStack{
-                            Rectangle().frame(width: 100, height: 100)
+                            Image(menuItem.image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .scaledToFit()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 100)
+                                .cornerRadius(150)
+                                .clipped()
                             Text(menuItem.title)
                                 .font(.footnote)
                         }

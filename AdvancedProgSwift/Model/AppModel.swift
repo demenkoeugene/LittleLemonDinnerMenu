@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol MenuItemProtocol {
     var id: UUID { get }
@@ -14,6 +15,7 @@ protocol MenuItemProtocol {
     var menuCategory: MenuCategory { get }
     var ordersCount: Int { get set }
     var ingredient: [Ingredient] { get set }
+    var image: String { get set }
 }
 
 
@@ -25,12 +27,14 @@ struct MenuItem: MenuItemProtocol, Identifiable {
     var menuCategory: MenuCategory
     var ordersCount: Int
     var ingredient: [Ingredient]
+    var image: String
     
-    init(price: Double, title: String, menuCategory: MenuCategory, ordersCount: Int, ingredient: [Ingredient]) {
+    init(price: Double, title: String, menuCategory: MenuCategory, ordersCount: Int, ingredient: [Ingredient], image: String) {
         self.price = price
         self.title = title
         self.menuCategory = menuCategory
         self.ordersCount = ordersCount
         self.ingredient = ingredient
+        self.image = image
     }
 }

@@ -7,6 +7,7 @@
 
 
 import Foundation
+import SwiftUI
 
 
 
@@ -19,38 +20,41 @@ class MenuViewViewModel: ObservableObject {
 
     init() {
         foodMenuItems = [
-            MenuItem(price: 9.99, title: "Cheeseburger", menuCategory: .food, ordersCount: 100, ingredient: [.broccoli, .carrot]),
-            MenuItem(price: 12.99, title: "Pizza", menuCategory: .food, ordersCount: 14, ingredient: [.spinach, .tomatoSauce]),
-            MenuItem(price: 6.99, title: "Chicken Sandwich", menuCategory: .food, ordersCount: 16, ingredient: [.pasta, .tomatoSauce]),
-            MenuItem(price: 8.99, title: "Spaghetti", menuCategory: .food, ordersCount: 200, ingredient: [.carrot, .pasta]),
-            MenuItem(price: 10.99, title: "Caesar Salad", menuCategory: .food, ordersCount: 23, ingredient: [.spinach, .carrot]),
-            MenuItem(price: 7.99, title: "Fish and Chips", menuCategory: .food, ordersCount: 145, ingredient: [.spinach, .broccoli]),
-            MenuItem(price: 5.99, title: "Margarita Pizza", menuCategory: .food, ordersCount: 43, ingredient: [.pasta, .tomatoSauce]),
-            MenuItem(price: 11.99, title: "Steak", menuCategory: .food, ordersCount: 65, ingredient: [.pasta, .spinach]),
-            MenuItem(price: 9.99, title: "Grilled Chicken", menuCategory: .food, ordersCount: 54, ingredient: [.tomatoSauce, .carrot]),
-            MenuItem(price: 8.99, title: "Tacos", menuCategory: .food, ordersCount: 34, ingredient: [.carrot, .tomatoSauce]),
-            MenuItem(price: 7.99, title: "Sushi", menuCategory: .food, ordersCount: 23, ingredient: [.pasta, .tomatoSauce]),
-            MenuItem(price: 6.99, title: "Pasta Alfredo", menuCategory: .food, ordersCount: 456, ingredient: [.spinach,.carrot])
+            MenuItem(price: 9.99, title: "Cheeseburger", menuCategory: .food, ordersCount: 100, ingredient: [.broccoli, .carrot], image: "Cheeseburger"),
+            MenuItem(price: 12.99, title: "Pizza", menuCategory: .food, ordersCount: 14, ingredient: [.spinach, .tomatoSauce], image: "Pizza"),
+            MenuItem(price: 6.99, title: "Chicken Sandwich", menuCategory: .food, ordersCount: 16, ingredient: [.pasta, .tomatoSauce], image: "Chicken Sandwich"),
+            MenuItem(price: 8.99, title: "Spaghetti", menuCategory: .food, ordersCount: 200, ingredient: [.carrot, .pasta], image: "Spaghetti"),
+            MenuItem(price: 10.99, title: "Caesar Salad", menuCategory: .food, ordersCount: 23, ingredient: [.spinach, .carrot], image: "Caesar Salad"),
+            MenuItem(price: 7.99, title: "Fish and Chips", menuCategory: .food, ordersCount: 145, ingredient: [.spinach, .broccoli], image: "Fish and Chips"),
+            MenuItem(price: 5.99, title: "Margarita Pizza", menuCategory: .food, ordersCount: 43, ingredient: [.pasta, .tomatoSauce], image: "Margarita Pizza"),
+            MenuItem(price: 11.99, title: "Steak", menuCategory: .food, ordersCount: 65, ingredient: [.pasta, .spinach], image: "Steak"),
+            MenuItem(price: 9.99, title: "Grilled Chicken", menuCategory: .food, ordersCount: 54, ingredient: [.tomatoSauce, .carrot], image: "Grilled Chicken"),
+            MenuItem(price: 8.99, title: "Tacos", menuCategory: .food, ordersCount: 34, ingredient: [.carrot, .tomatoSauce], image: "Tacos"),
+            MenuItem(price: 7.99, title: "Sushi", menuCategory: .food, ordersCount: 23, ingredient: [.pasta, .tomatoSauce], image: "Sushi"),
+            MenuItem(price: 6.99, title: "Pasta Alfredo", menuCategory: .food, ordersCount: 456, ingredient: [.spinach,.carrot], image: "Pasta Alfredo")
         ]
         
         drinkMenuItems = [
-            MenuItem(price: 2.99, title: "Coca-Cola", menuCategory: .drink, ordersCount: 34, ingredient: [.carrot]),
-            MenuItem(price: 1.99, title: "Lemonade", menuCategory: .drink, ordersCount: 100, ingredient: [.tomatoSauce]),
-            MenuItem(price: 3.99, title: "Iced Coffee", menuCategory: .drink, ordersCount: 34, ingredient: [.pasta]),
-            MenuItem(price: 2.49, title: "Orange Juice", menuCategory: .drink, ordersCount: 46, ingredient: [.pasta]),
-            MenuItem(price: 2.99, title: "Mojito", menuCategory: .drink, ordersCount: 120, ingredient: [.spinach]),
-            MenuItem(price: 1.99, title: "Water", menuCategory: .drink, ordersCount: 34, ingredient: [.tomatoSauce]),
-            MenuItem(price: 3.49, title: "Smoothie", menuCategory: .drink, ordersCount: 23, ingredient: [.spinach]),
-            MenuItem(price: 2.99, title: "Iced Tea", menuCategory: .drink, ordersCount: 345, ingredient: [.broccoli])
+            MenuItem(price: 2.99, title: "Coca-Cola", menuCategory: .drink, ordersCount: 34, ingredient: [.carrot], image: "Coca-Cola"),
+            MenuItem(price: 1.99, title: "Lemonade", menuCategory: .drink, ordersCount: 100, ingredient: [.tomatoSauce], image: "Lemonade"),
+            MenuItem(price: 3.99, title: "Iced Coffee", menuCategory: .drink, ordersCount: 34, ingredient: [.pasta], image: "Iced Coffee"),
+            MenuItem(price: 2.49, title: "Orange Juice", menuCategory: .drink, ordersCount: 46, ingredient: [.pasta], image: "Orange Juice"),
+            MenuItem(price: 2.99, title: "Mojito", menuCategory: .drink, ordersCount: 120, ingredient: [.spinach], image: "Mojito"),
+            MenuItem(price: 1.99, title: "Water", menuCategory: .drink, ordersCount: 34, ingredient: [.tomatoSauce], image: "Water"),
+            MenuItem(price: 3.49, title: "Smoothie", menuCategory: .drink, ordersCount: 23, ingredient: [.spinach], image: "Smoothie"),
+            MenuItem(price: 2.99, title: "Iced Tea", menuCategory: .drink, ordersCount: 345, ingredient: [.broccoli], image: "Iced Tea")
         ]
         
         dessertMenuItems = [
-            MenuItem(price: 4.99, title: "Chocolate Cake", menuCategory: .dessert, ordersCount: 343, ingredient: [.carrot, .spinach, .tomatoSauce]),
-            MenuItem(price: 3.99, title: "Ice Cream Sundae", menuCategory: .dessert, ordersCount: 45, ingredient: [.carrot, .tomatoSauce]),
-            MenuItem(price: 2.99, title: "Apple Pie", menuCategory: .dessert, ordersCount: 45, ingredient: [.pasta, .tomatoSauce]),
-            MenuItem(price: 5.99, title: "Cheesecake", menuCategory: .dessert, ordersCount: 36, ingredient: [.carrot])
+            MenuItem(price: 4.99, title: "Chocolate Cake", menuCategory: .dessert, ordersCount: 343, ingredient: [.carrot, .spinach, .tomatoSauce], image: "Chocolate Cake"),
+            MenuItem(price: 3.99, title: "Ice Cream Sundae", menuCategory: .dessert, ordersCount: 45, ingredient: [.carrot, .tomatoSauce], image: "Ice Cream Sundae"),
+            MenuItem(price: 2.99, title: "Apple Pie", menuCategory: .dessert, ordersCount: 45, ingredient: [.pasta, .tomatoSauce], image: "Apple Pie"),
+            MenuItem(price: 5.99, title: "Cheesecake", menuCategory: .dessert, ordersCount: 36, ingredient: [.carrot], image: "Cheesecake")
         ]
     }
+    
+    
+    
     
     @Published var isShowFood = true
     @Published var isShowDrinks = true
@@ -87,6 +91,7 @@ class MenuViewViewModel: ObservableObject {
         }
         
     }
+    
 }
 
 

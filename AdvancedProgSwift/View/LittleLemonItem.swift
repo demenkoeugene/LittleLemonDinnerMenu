@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct LittleLemonItem: View {
+    var menuItem: MenuItem
     var body: some View {
-        
-        Image("Little Lemon logo")
+        Image(menuItem.image)
             .resizable(resizingMode: .stretch)
             .aspectRatio(contentMode: .fit)
-            .padding([.leading, .trailing], 50)
+            .padding([.top, .leading, .trailing, .bottom], 30)
+           
     }
 }
 
-struct LittleLemonItem_Previews: PreviewProvider {
-    static var previews: some View {
-        LittleLemonItem()
-    }
-}
+//struct LittleLemonItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//       
+//        LittleLemonItem(menuItem: menuItem)
+//    }
+//}
